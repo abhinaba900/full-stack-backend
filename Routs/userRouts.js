@@ -48,8 +48,8 @@ userRoute.post("/login", async (req, res) => {
         );
 
         // Set secure cookies
-        res.cookie("authToken", authToken);
-        res.cookie("refreshToken", refreshToken);
+        res.cookie("authToken","authToken" ,authToken);
+        res.cookie("refreshToken", refreshToken,refreshToken);
 
         res.status(200).send({ user, authToken, refreshToken });
       } else {

@@ -8,10 +8,11 @@ const movieRoute = require("./Routs/movieRouts");
 const { Movie } = require("./Model/userModle");
 const userRoute = require("./Routs/userRouts");
 const verifyData = require("./Middleware/auth.middleware");
+const cors= require('cors');
 
 app.use(cookieParser());
 app.use(express.json());
-
+app.use(cors({origin: true, credentials: true}));
 app.use("/movie", movieRoute);
 
 app.use("/user", userRoute);

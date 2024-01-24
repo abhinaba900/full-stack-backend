@@ -12,7 +12,7 @@ const cors = require('cors');
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors({
-    origin: 'https://smoggy-onesies-newt.cyclic.app/' // replace with your client's origin
+    origin: 'http://localhost:3000/' // replace with your client's origin
 }));
 app.use("/movie", movieRoute);
 

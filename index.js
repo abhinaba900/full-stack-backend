@@ -12,7 +12,7 @@ const cors= require('cors');
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(cors({origin: true, credentials: true}));
+app.use(cors({origin: "*", credentials: true}));
 app.use("/movie", movieRoute);
 
 app.use("/user", userRoute);
